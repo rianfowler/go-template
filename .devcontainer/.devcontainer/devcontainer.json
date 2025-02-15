@@ -13,6 +13,5 @@
         "golang.Go"
       ]
     }
-  },
-  "postCreateCommand": "go mod tidy"
+  }
 }
