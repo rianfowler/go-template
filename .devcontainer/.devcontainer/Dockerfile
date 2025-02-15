@@ -12,6 +12,9 @@ RUN apt-get update && apt-get install -y \
 # Install cobra-cli for scaffolding CLI applications
 RUN go install github.com/spf13/cobra-cli@latest
 
+# Install testing library
+RUN go install gotest.tools/gotestsum@latest
+
 # Install Oh My Zsh non-interactively
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
