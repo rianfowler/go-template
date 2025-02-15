@@ -1,5 +1,5 @@
 # Binary name for your project; adjust as needed.
-BINARY_NAME = myapp
+BINARY_NAME = ./bin/myapp
 
 .PHONY: all
 all: build
