@@ -7,13 +7,20 @@ RUN apt-get update && apt-get install -y \
   make \
   zsh \
   curl \
+  tmux \
   && rm -rf /var/lib/apt/lists/*
 
 # Install Delve, a Go debugging tool
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
 
+# Install Reflex, a watch task tool
+RUN go install github.com/cespare/reflex@latest
+
 # Install cobra-cli for scaffolding CLI applications
 RUN go install github.com/spf13/cobra-cli@latest
+
+# Install gotestsum, an alternate testing tool with prettier output
+RUN go install gotest.tools/gotestsum@latest
 
 # Install testing library
 RUN go install gotest.tools/gotestsum@latest
