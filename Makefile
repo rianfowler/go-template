@@ -39,3 +39,8 @@ watch:
 	tmux new-session -d -s watch_session "tmux set-option -g mouse on; make watch-test" \
 		\; split-window -h "make watch-run" \
 		\; attach-session
+
+.PHONY: watch-kill
+watch-kill:
+	tmux kill-session -t watch_session
+
