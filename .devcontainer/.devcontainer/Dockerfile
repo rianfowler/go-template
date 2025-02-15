@@ -9,6 +9,9 @@ RUN apt-get update && apt-get install -y \
   curl \
   && rm -rf /var/lib/apt/lists/*
 
+# Install Delve, a Go debugging tool
+RUN go install github.com/go-delve/delve/cmd/dlv@latest
+
 # Install cobra-cli for scaffolding CLI applications
 RUN go install github.com/spf13/cobra-cli@latest
 
